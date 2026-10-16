@@ -48,6 +48,36 @@ cd person2-brain
 python3 test_person2_unit.py
 python3 test_backend.py
 
+
+## 🎬 Demo Video
+
+[![Smart Recycling Assistant — Demo](https://img.youtube.com/vi/Ei279IasJ20/maxresdefault.jpg)](https://youtu.be/Ei279IasJ20)
+
+**▶️ [Watch on YouTube](https://youtu.be/Ei279IasJ20)** · 2:47 min
+
+Full walkthrough: React frontend → FastAPI backend → RAG-grounded tips → live CO₂ impact tracking.
+
+---
+
+## 📸 Screenshots
+
+### 1. Person 3 Frontend — AI Waste Scanner
+![Frontend](docs/screenshots/03.jpeg)
+
+### 2. Person 2 Backend — Battery API Response
+![Battery API](docs/screenshots/02.jpeg)
+
+### 3. Swagger UI — 18 Endpoints
+![Swagger UI](docs/screenshots/01.jpeg)
+
+### 4. Person 1 Vision — Standalone Classifier
+![Vision](docs/screenshots/05.jpeg)
+
+### 5. Live LAN Demo — Cross-Machine
+![LAN Demo](docs/screenshots/08.jpeg)
+
+---
+
 ## 📜 License
 
 MIT - see LICENSE.
