@@ -49,6 +49,14 @@ python3 test_person2_unit.py
 python3 test_backend.py
 
 
+## 🌐 Live Frontend
+
+**Try it now:** [https://smart-recycling-assistant-76.netlify.app](https://smart-recycling-assistant-76.netlify.app)
+
+> **Note:** The Netlify deploy shows the full UI. For live AI classification, run the backend locally (see Quick Start) — the API runs on-device via Ollama.
+
+---
+
 ## 🎬 Demo Video
 
 [![Smart Recycling Assistant — Demo](https://img.youtube.com/vi/Ei279IasJ20/maxresdefault.jpg)](https://youtu.be/Ei279IasJ20)
