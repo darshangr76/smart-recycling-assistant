@@ -1,0 +1,284 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070A11" />
+      <stop offset="50%" stop-color="#0B0F19" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <!-- Emerald Glow Radial -->
+    <radialGradient id="emeraldGlow" cx="20%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.25" />
+      <stop offset="60%" stop-color="#10B981" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Cyan Glow Radial -->
+    <radialGradient id="cyanGlow" cx="85%" cy="75%" r="55%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.22" />
+      <stop offset="70%" stop-color="#06B6D4" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151E2E" stop-opacity="0.92" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Accent Emerald Gradient -->
+    <linearGradient id="accentEmerald" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+
+    <!-- Blue Gradient -->
+    <linearGradient id="accentBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#60A5FA" />
+    </linearGradient>
+
+    <!-- Radar Sweep Gradient -->
+    <radialGradient id="radarSweep" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.4" />
+      <stop offset="70%" stop-color="#10B981" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="glowDrop" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Deep Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Ambient Grid Overlay -->
+  <rect width="1200" height="630" fill="url(#grid)" />
+
+  <!-- Ambient Glow Blobs -->
+  <circle cx="240" cy="180" r="380" fill="url(#emeraldGlow)" />
+  <circle cx="980" cy="460" r="420" fill="url(#cyanGlow)" />
+
+  <!-- Outer Glass Frame Border -->
+  <rect x="24" y="24" width="1152" height="582" rx="24" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+
+  <!-- TOP BAR / HEADER -->
+  <g transform="translate(60, 60)">
+    <!-- Brand Icon -->
+    <rect x="0" y="0" width="56" height="56" rx="16" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-width="1.5" filter="url(#glowDrop)" />
+    <!-- Recycle Arrows in Icon -->
+    <g transform="translate(14, 14) scale(1.15)">
+      <path d="M4 14H2.5A1.5 1.5 0 0 1 1 12.5a1.5 1.5 0 0 1 0-1.5L4.5 4" fill="none" stroke="#10B981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M7 14h6.5a1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0 0-1.5L12 8" fill="none" stroke="#10B981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M10 11l-3 3 3 3" fill="none" stroke="#10B981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M5 2l2.5 4.5" fill="none" stroke="#34D399" stroke-width="2.2" stroke-linecap="round" />
+      <circle cx="18" cy="4" r="2" fill="#34D399" />
+    </g>
+
+    <!-- Brand Name -->
+    <text x="72" y="32" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="800" font-size="28" fill="#FFFFFF" letter-spacing="-0.5">
+      SmartRecycle <tspan fill="#10B981">AI</tspan>
+    </text>
+    <text x="74" y="50" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="600" font-size="12" fill="#64748B" letter-spacing="1.5">
+      VISION-POWERED SUSTAINABILITY PLATFORM
+    </text>
+
+    <!-- Top Badges on Right -->
+    <g transform="translate(860, 4)">
+      <!-- Live GPS Active Pill -->
+      <rect x="0" y="0" width="128" height="34" rx="17" fill="#10B981" fill-opacity="0.12" stroke="#10B981" stroke-opacity="0.3" stroke-width="1" />
+      <circle cx="18" cy="17" r="4.5" fill="#10B981" />
+      <circle cx="18" cy="17" r="8" fill="none" stroke="#10B981" stroke-width="1" opacity="0.6" />
+      <text x="32" y="21" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="700" fill="#34D399" letter-spacing="0.5">LIVE GPS LOCK</text>
+
+      <!-- 10 Languages Pill -->
+      <rect x="138" y="0" width="76" height="34" rx="17" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+      <text x="150" y="21" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="700" fill="#E2E8F0">🌐 10 LANG</text>
+    </g>
+  </g>
+
+  <!-- HERO LEFT COLUMN: Typography & Value Prop -->
+  <g transform="translate(60, 160)">
+    <!-- Category Pill -->
+    <rect x="0" y="0" width="220" height="28" rx="14" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    <circle cx="14" cy="14" r="3.5" fill="#10B981" />
+    <text x="26" y="18" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="700" fill="#CBD5E1" letter-spacing="1">
+      AI WASTE CAMERA &amp; GPS
+    </text>
+
+    <!-- Main Headline -->
+    <text x="0" y="80" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="46" font-weight="800" fill="#FFFFFF" letter-spacing="-1">
+      Intelligent Waste Sorting
+    </text>
+    <text x="0" y="135" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="46" font-weight="800" fill="url(#accentEmerald)" letter-spacing="-1">
+      &amp; Live GPS Radar Finder
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="182" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="400" fill="#94A3B8">
+      Identify recyclables with instant AI camera vision. Locate nearest verified
+    </text>
+    <text x="0" y="208" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="400" fill="#94A3B8">
+      e-waste, battery &amp; composting hubs via browser <tspan fill="#34D399" font-weight="600">navigator.geolocation</tspan>.
+    </text>
+
+    <!-- Feature Tags -->
+    <g transform="translate(0, 245)">
+      <!-- Tag 1 -->
+      <rect x="0" y="0" width="145" height="36" rx="10" fill="#1E293B" fill-opacity="0.7" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <text x="14" y="22" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#F1F5F9">⚡ Realtime Vision</text>
+
+      <!-- Tag 2 -->
+      <rect x="155" y="0" width="168" height="36" rx="10" fill="#1E293B" fill-opacity="0.7" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <text x="169" y="22" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#F1F5F9">🛰️ GPS Telemetry Radar</text>
+
+      <!-- Tag 3 -->
+      <rect x="333" y="0" width="145" height="36" rx="10" fill="#1E293B" fill-opacity="0.7" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <text x="347" y="22" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#F1F5F9">🏆 Eco Gamification</text>
+    </g>
+
+    <!-- METRICS STRIP -->
+    <g transform="translate(0, 310)">
+      <!-- Metric 1 -->
+      <g>
+        <text x="0" y="28" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="32" font-weight="800" fill="#FFFFFF">96.4%</text>
+        <text x="0" y="46" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#64748B" letter-spacing="0.5">ACCURACY RATE</text>
+      </g>
+      <!-- Separator -->
+      <line x1="130" y1="8" x2="130" y2="48" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+
+      <!-- Metric 2 -->
+      <g transform="translate(155, 0)">
+        <text x="0" y="28" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="32" font-weight="800" fill="#34D399">±9m</text>
+        <text x="0" y="46" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#64748B" letter-spacing="0.5">GPS PRECISION</text>
+      </g>
+      <!-- Separator -->
+      <line x1="285" y1="8" x2="285" y2="48" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+
+      <!-- Metric 3 -->
+      <g transform="translate(310, 0)">
+        <text x="0" y="28" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="32" font-weight="800" fill="#38BDF8">&lt; 1.2s</text>
+        <text x="0" y="46" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#64748B" letter-spacing="0.5">DETECTION LATENCY</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- HERO RIGHT COLUMN: Interactive GPS Radar Finder & Glass Card Mockup -->
+  <g transform="translate(680, 140)" filter="url(#cardShadow)">
+    <!-- Main Card Body -->
+    <rect x="0" y="0" width="460" height="420" rx="20" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+
+    <!-- Card Top Header -->
+    <g transform="translate(24, 20)">
+      <circle cx="8" cy="8" r="4" fill="#EF4444" opacity="0.8" />
+      <circle cx="24" cy="8" r="4" fill="#F59E0B" opacity="0.8" />
+      <circle cx="40" cy="8" r="4" fill="#10B981" opacity="0.8" />
+
+      <rect x="68" y="-2" width="230" height="20" rx="6" fill="rgba(255,255,255,0.05)" />
+      <text x="78" y="12" font-family="monospace" font-size="10" fill="#94A3B8">navigator.geolocation.watch()</text>
+
+      <rect x="312" y="-3" width="94" height="22" rx="11" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-width="0.8" />
+      <circle cx="324" cy="8" r="3" fill="#10B981" />
+      <text x="333" y="12" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="700" fill="#34D399">LOCK ACTIVE</text>
+    </g>
+
+    <!-- GPS RADAR SCREEN -->
+    <g transform="translate(24, 60)">
+      <!-- Radar Background -->
+      <rect x="0" y="0" width="412" height="230" rx="14" fill="#080D1A" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+
+      <!-- Center Point of Radar -->
+      <g transform="translate(206, 115)">
+        <!-- Range Rings -->
+        <circle cx="0" cy="0" r="35" fill="none" stroke="#10B981" stroke-opacity="0.15" stroke-width="1" />
+        <circle cx="0" cy="0" r="70" fill="none" stroke="#10B981" stroke-opacity="0.12" stroke-width="1" />
+        <circle cx="0" cy="0" r="105" fill="none" stroke="#10B981" stroke-opacity="0.08" stroke-width="1" stroke-dasharray="3 3" />
+
+        <!-- Crosshair Axes -->
+        <line x1="-190" y1="0" x2="190" y2="0" stroke="rgba(16,185,129,0.12)" stroke-width="1" />
+        <line x1="0" y1="-100" x2="0" y2="100" stroke="rgba(16,185,129,0.12)" stroke-width="1" />
+
+        <!-- Radar Sweep Sector -->
+        <path d="M 0 0 L 80 -60 A 100 100 0 0 1 100 0 Z" fill="url(#radarSweep)" opacity="0.75" />
+
+        <!-- User Live GPS Position (Pulsing Pin) -->
+        <circle cx="0" cy="0" r="14" fill="#10B981" fill-opacity="0.2" />
+        <circle cx="0" cy="0" r="7" fill="#10B981" />
+        <circle cx="0" cy="0" r="2.5" fill="#FFFFFF" />
+
+        <!-- Blip 1: E-Waste Depot (North-East, 1.2 km) -->
+        <g transform="translate(62, -44)">
+          <circle cx="0" cy="0" r="4.5" fill="#06B6D4" />
+          <circle cx="0" cy="0" r="9" fill="none" stroke="#06B6D4" stroke-opacity="0.4" stroke-width="1" />
+          <rect x="8" y="-12" width="102" height="18" rx="4" fill="#0F172A" stroke="rgba(6,182,212,0.3)" stroke-width="0.8" />
+          <text x="14" y="0" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="8" font-weight="700" fill="#E2E8F0">E-Waste Hub • 1.2km</text>
+        </g>
+
+        <!-- Blip 2: Municipal Composting (South-West, 0.8 km) -->
+        <g transform="translate(-48, 52)">
+          <circle cx="0" cy="0" r="4" fill="#84CC16" />
+          <rect x="-106" y="-6" width="96" height="18" rx="4" fill="#0F172A" stroke="rgba(132,204,22,0.3)" stroke-width="0.8" />
+          <text x="-100" y="6" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="8" font-weight="700" fill="#E2E8F0">Compost Depot • 0.8km</text>
+        </g>
+
+        <!-- Blip 3: Battery Drop Point (East, 2.4 km) -->
+        <g transform="translate(95, 20)">
+          <circle cx="0" cy="0" r="4" fill="#F59E0B" />
+        </g>
+
+        <!-- Range Labels -->
+        <text x="2" y="-38" font-family="monospace" font-size="7" fill="#64748B">1.0 km</text>
+        <text x="2" y="-73" font-family="monospace" font-size="7" fill="#64748B">2.5 km</text>
+      </g>
+
+      <!-- Live Coordinates Overlay Bar -->
+      <g transform="translate(10, 196)">
+        <rect x="0" y="0" width="392" height="26" rx="6" fill="#0B1120" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+        <text x="10" y="17" font-family="monospace" font-size="10" fill="#34D399" font-weight="700">LAT: 12.9716°N</text>
+        <text x="135" y="17" font-family="monospace" font-size="10" fill="#34D399" font-weight="700">LON: 77.5946°E</text>
+        <text x="260" y="17" font-family="monospace" font-size="10" fill="#94A3B8">ACC: ±8.4m [GPS 3D]</text>
+      </g>
+    </g>
+
+    <!-- BOTTOM DROP-OFF CARD SNIPPET -->
+    <g transform="translate(24, 304)">
+      <rect x="0" y="0" width="412" height="96" rx="12" fill="#0E1626" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+
+      <g transform="translate(14, 16)">
+        <!-- Green Pin Icon -->
+        <circle cx="16" cy="16" r="16" fill="#10B981" fill-opacity="0.15" />
+        <path d="M16 8a5 5 0 0 0-5 5c0 3.75 5 9 5 9s5-5.25 5-9a5 5 0 0 0-5-5zm0 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#10B981" />
+
+        <!-- Center Name & Distance -->
+        <text x="42" y="14" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Hasiru Dala Dry Waste Hub</text>
+        <text x="42" y="30" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#94A3B8">Indiranagar 100ft Road • Plastic, E-Waste</text>
+
+        <!-- Distance Badge -->
+        <g transform="translate(305, 2)">
+          <rect x="0" y="0" width="75" height="30" rx="8" fill="#10B981" />
+          <text x="37" y="19" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="800" fill="#062817" text-anchor="middle">0.8 KM</text>
+        </g>
+      </g>
+
+      <!-- Action Footer -->
+      <line x1="14" y1="62" x2="398" y2="62" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+      <g transform="translate(14, 78)">
+        <text x="0" y="0" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="600" fill="#64748B">HOURS: 9:00 AM - 6:00 PM</text>
+        <text x="310" y="0" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10" font-weight="700" fill="#34D399">OPEN IN MAPS ↗</text>
+      </g>
+    </g>
+  </g>
+</svg>

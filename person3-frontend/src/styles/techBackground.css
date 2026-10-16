@@ -1,0 +1,246 @@
+/* ============================================================
+ * CINEMATIC TECH-GRID BACKGROUND
+ * Clean minimalist slate canvas with ultra-thin cyan grid,
+ * neon geometric lines, interconnected vector dot-network,
+ * and wide negative workspace for dashboard UI elements.
+ * ============================================================ */
+
+:root {
+  --tech-bg: #0B0F19;
+  --grid-cyan: rgba(0, 255, 255, 0.045);
+  --grid-glow-cyan: rgba(0, 255, 255, 0.12);
+  --neon-deep-blue: rgba(0, 90, 220, 0.12);
+  --neon-cyan-faint: rgba(0, 230, 255, 0.06);
+  --dot-color: rgba(0, 220, 240, 0.45);
+  --line-color: rgba(0, 180, 220, 0.08);
+}
+
+/* ── Grid overlay ─────────────────────────────── */
+.tech-grid-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Subtle gray + cyan grid lines */
+.tech-grid-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    /* Horizontal lines */
+    linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    /* Vertical lines */
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    /* Cyan accent horizontals (every 4th line) */
+    linear-gradient(
+      0deg,
+      var(--grid-cyan) 1px,
+      transparent 1px
+    ),
+    /* Cyan accent verticals (every 4th line) */
+    linear-gradient(
+      90deg,
+      var(--grid-cyan) 1px,
+      transparent 1px
+    );
+  background-size:
+    40px 40px,
+    40px 40px,
+    160px 160px,
+    160px 160px;
+  opacity: 0.7;
+}
+
+/* Neon geometric radial glows */
+.tech-grid-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    /* Top-left deep blue sweep */
+    radial-gradient(
+      ellipse 600px 400px at 15% 20%,
+      var(--neon-deep-blue),
+      transparent
+    ),
+    /* Bottom-right cyan haze */
+    radial-gradient(
+      ellipse 500px 350px at 80% 75%,
+      var(--neon-cyan-faint),
+      transparent
+    ),
+    /* Center-top subtle blue line-glow */
+    radial-gradient(
+      ellipse 800px 200px at 50% 10%,
+      rgba(0, 120, 255, 0.06),
+      transparent
+    ),
+    /* Bottom-left edge accent */
+    radial-gradient(
+      ellipse 400px 500px at 5% 90%,
+      rgba(0, 200, 255, 0.04),
+      transparent
+    );
+  mix-blend-mode: screen;
+  opacity: 0.6;
+  animation: neonBreath 12s ease-in-out infinite alternate;
+}
+
+@keyframes neonBreath {
+  0%   { opacity: 0.45; }
+  100% { opacity: 0.65; }
+}
+
+/* ── Diagonal geometric accent lines ───────────── */
+.tech-geo-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.tech-geo-lines span {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--grid-glow-cyan),
+    rgba(0, 120, 255, 0.10),
+    transparent
+  );
+  transform-origin: center;
+  opacity: 0;
+  animation: geoLineAppear 8s ease-in-out infinite;
+}
+
+.tech-geo-lines span:nth-child(1) {
+  top: 18%;
+  left: -5%;
+  width: 45%;
+  transform: rotate(-12deg);
+  animation-delay: 0s;
+}
+.tech-geo-lines span:nth-child(2) {
+  top: 40%;
+  right: -5%;
+  width: 55%;
+  transform: rotate(8deg);
+  animation-delay: 2s;
+}
+.tech-geo-lines span:nth-child(3) {
+  bottom: 25%;
+  left: 10%;
+  width: 35%;
+  transform: rotate(-5deg);
+  animation-delay: 4s;
+}
+.tech-geo-lines span:nth-child(4) {
+  top: 65%;
+  right: 5%;
+  width: 40%;
+  transform: rotate(15deg);
+  animation-delay: 6s;
+}
+.tech-geo-lines span:nth-child(5) {
+  top: 8%;
+  left: 35%;
+  width: 30%;
+  transform: rotate(-20deg);
+  animation-delay: 3s;
+}
+
+@keyframes geoLineAppear {
+  0%, 100% { opacity: 0; }
+  15%      { opacity: 0.4; }
+  50%      { opacity: 0.7; }
+  85%      { opacity: 0.3; }
+}
+
+/* ── Vector dot nodes ─────────────────────────── */
+.tech-dots-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.tech-dot {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--dot-color);
+  border-radius: 50%;
+  box-shadow:
+    0 0 4px 1px var(--grid-glow-cyan),
+    0 0 12px 2px rgba(0, 200, 255, 0.08);
+  animation: dotPulse 5s ease-in-out infinite;
+}
+
+/* Larger "hub" nodes at network intersections */
+.tech-dot.hub {
+  width: 5px;
+  height: 5px;
+  background: rgba(0, 240, 255, 0.6);
+  box-shadow:
+    0 0 8px 2px var(--grid-glow-cyan),
+    0 0 20px 4px rgba(0, 200, 255, 0.12);
+}
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 0.25; transform: scale(0.8); }
+  50%      { opacity: 0.85; transform: scale(1.2); }
+}
+
+/* Stagger dot animations for organic feel */
+.tech-dot:nth-child(3n)   { animation-duration: 4s; animation-delay: 0.5s; }
+.tech-dot:nth-child(5n)   { animation-duration: 6s; animation-delay: 1.2s; }
+.tech-dot:nth-child(7n)   { animation-duration: 7s; animation-delay: 0.8s; }
+.tech-dot:nth-child(11n)  { animation-duration: 5.5s; animation-delay: 2s; }
+.tech-dot:nth-child(2n+1) { animation-delay: 1.5s; }
+
+/* ── SVG connector lines between dots ─────────── */
+.tech-connectors {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.tech-connectors line {
+  stroke: var(--line-color);
+  stroke-width: 0.5;
+  animation: connectorFade 6s ease-in-out infinite alternate;
+}
+
+.tech-connectors line:nth-child(odd) {
+  animation-delay: 1s;
+  stroke: rgba(0, 120, 255, 0.06);
+}
+
+@keyframes connectorFade {
+  0%   { opacity: 0.3; }
+  50%  { opacity: 0.7; }
+  100% { opacity: 0.4; }
+}
+
+/* ── Edge vignette for cinematic depth ─────────── */
+.tech-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    transparent 55%,
+    rgba(5, 8, 14, 0.5) 100%
+  );
+}

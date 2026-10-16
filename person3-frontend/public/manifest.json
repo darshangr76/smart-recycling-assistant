@@ -1,0 +1,42 @@
+{
+  "name": "Smart Recycle AI — Intelligent Waste & Sustainability Platform",
+  "short_name": "SmartRecycle",
+  "description": "AI-Powered Waste Classification & Live GPS Radar Finder. Operates seamlessly both online and offline with Edge AI fallback.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0B0F19",
+  "theme_color": "#0B0F19",
+  "categories": ["utilities", "productivity", "education"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/thumbnail.svg",
+      "sizes": "1200x630",
+      "type": "image/svg+xml"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Scan Waste",
+      "url": "/scanner",
+      "description": "Instant AI Waste Classification with Contamination Warning"
+    },
+    {
+      "name": "Live GPS Radar",
+      "url": "/centers",
+      "description": "Find nearby verified recycling drop-off centers"
+    },
+    {
+      "name": "Eco Rewards",
+      "url": "/rewards",
+      "description": "View Eco badges and redemption points"
+    }
+  ]
+}

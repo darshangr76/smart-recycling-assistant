@@ -1,0 +1,517 @@
+[
+  {
+    "timestamp": "2026-10-16T14:03:53.622441",
+    "label": "plastic bottle",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:01.335410",
+    "label": "plastic container",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:01.338254",
+    "label": "plastic bag",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:04.734234",
+    "label": "plastic wrapper",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:07.678099",
+    "label": "glass bottle",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:07.680635",
+    "label": "glass jar",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:07.682861",
+    "label": "aluminum can",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:10.803722",
+    "label": "metal can",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:13.830580",
+    "label": "tin foil",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:13.833739",
+    "label": "cardboard box",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:16.692355",
+    "label": "cardboard",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:19.809503",
+    "label": "paper",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:19.811950",
+    "label": "newspaper",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:22.140836",
+    "label": "magazine",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:24.758916",
+    "label": "office paper",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:27.875834",
+    "label": "junk mail",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:30.400479",
+    "label": "cereal box",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:33.783958",
+    "label": "paper bag",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:33.786708",
+    "label": "shampoo bottle",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:36.526687",
+    "label": "detergent bottle",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:39.530918",
+    "label": "milk jug",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:43.628041",
+    "label": "yogurt cup",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:47.962521",
+    "label": "soda bottle",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:51.005384",
+    "label": "water bottle",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:54.416638",
+    "label": "juice carton",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:57.434230",
+    "label": "steel can",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:04:57.436491",
+    "label": "aerosol can",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:01.226338",
+    "label": "jar lid",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:04.280689",
+    "label": "aluminum foil",
+    "category": "Recyclable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:04.283430",
+    "label": "banana peel",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:04.286004",
+    "label": "apple core",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:07.586052",
+    "label": "orange peel",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:12.546156",
+    "label": "vegetable scraps",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:15.896285",
+    "label": "fruit scraps",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:15.899410",
+    "label": "coffee grounds",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:18.901423",
+    "label": "tea bags",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:18.903697",
+    "label": "egg shells",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:22.393418",
+    "label": "bread",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:26.597390",
+    "label": "rice",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:30.630953",
+    "label": "pasta",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:33.301134",
+    "label": "leaves",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:37.722461",
+    "label": "grass clippings",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:40.356674",
+    "label": "flowers",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:43.761465",
+    "label": "plant trimmings",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:47.856802",
+    "label": "wood chips",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:51.350218",
+    "label": "sawdust",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:54.331569",
+    "label": "paper napkin",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:57.985135",
+    "label": "paper towel",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:05:57.988327",
+    "label": "pizza box",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:01.163857",
+    "label": "corn cob",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:05.348744",
+    "label": "watermelon rind",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:08.651602",
+    "label": "bones",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:11.748140",
+    "label": "meat scraps",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:17.202360",
+    "label": "dairy",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:20.356264",
+    "label": "fish scraps",
+    "category": "Biodegradable"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:20.358976",
+    "label": "battery",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:23.556683",
+    "label": "batteries",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:27.885469",
+    "label": "lithium battery",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:32.299362",
+    "label": "car battery",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:32.302369",
+    "label": "e-waste",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:36.045839",
+    "label": "electronics",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:36.048786",
+    "label": "old phone",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:40.017586",
+    "label": "laptop",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:44.488796",
+    "label": "charger",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:49.662506",
+    "label": "cable",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:49.665856",
+    "label": "light bulb",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:54.357517",
+    "label": "cfl bulb",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:59.931713",
+    "label": "fluorescent tube",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:06:59.934247",
+    "label": "paint can",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:07:06.947400",
+    "label": "paint",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:07:12.371240",
+    "label": "solvent",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:07:18.896478",
+    "label": "pesticide",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:07:25.850221",
+    "label": "herbicide",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:07:25.853549",
+    "label": "medicine",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:07:25.855957",
+    "label": "expired medication",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:07:30.922662",
+    "label": "syringe",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:07:30.925450",
+    "label": "motor oil",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:07:36.196469",
+    "label": "antifreeze",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:07:41.615349",
+    "label": "thermometer",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:07:45.798978",
+    "label": "smoke detector",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:07:51.457982",
+    "label": "aerosol paint",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:07:57.478901",
+    "label": "nail polish",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:08:03.335089",
+    "label": "nail polish remover",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:08:08.765075",
+    "label": "ammunition",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:08:13.399356",
+    "label": "fire extinguisher",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:08:13.402137",
+    "label": "propane tank",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:08:18.791830",
+    "label": "pool chemicals",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:08:23.800370",
+    "label": "bleach",
+    "category": "Hazardous"
+  },
+  {
+    "timestamp": "2026-10-16T14:08:29.489043",
+    "label": "cloth bag",
+    "category": "Reusable"
+  },
+  {
+    "timestamp": "2026-10-16T14:08:33.939498",
+    "label": "shopping bag",
+    "category": "Reusable"
+  },
+  {
+    "timestamp": "2026-10-16T14:08:38.175957",
+    "label": "glass container",
+    "category": "Reusable"
+  },
+  {
+    "timestamp": "2026-10-16T14:08:38.179152",
+    "label": "mason jar",
+    "category": "Reusable"
+  },
+  {
+    "timestamp": "2026-10-16T14:08:42.195792",
+    "label": "coffee mug",
+    "category": "Reusable"
+  },
+  {
+    "timestamp": "2026-10-16T14:08:46.860870",
+    "label": "water flask",
+    "category": "Reusable"
+  },
+  {
+    "timestamp": "2026-10-16T14:08:46.863357",
+    "label": "t-shirt",
+    "category": "Reusable"
+  },
+  {
+    "timestamp": "2026-10-16T14:08:51.378183",
+    "label": "jeans",
+    "category": "Reusable"
+  },
+  {
+    "timestamp": "2026-10-16T14:08:55.743257",
+    "label": "jacket",
+    "category": "Reusable"
+  },
+  {
+    "timestamp": "2026-10-16T14:09:00.568289",
+    "label": "shoes",
+    "category": "Reusable"
+  },
+  {
+    "timestamp": "2026-10-16T14:09:00.570890",
+    "label": "backpack",
+    "category": "Reusable"
+  },
+  {
+    "timestamp": "2026-10-16T14:09:05.249097",
+    "label": "towel",
+    "category": "Reusable"
+  },
+  {
+    "timestamp": "2026-10-16T14:09:10.194364",
+    "label": "sheet",
+    "category": "Reusable"
+  },
+  {
+    "timestamp": "2026-10-16T14:09:14.195191",
+    "label": "blanket",
+    "category": "Reusable"
+  },
+  {
+    "timestamp": "2026-10-16T14:09:18.890630",
+    "label": "curtain",
+    "category": "Reusable"
+  }
+]

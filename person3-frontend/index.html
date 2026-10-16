@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5'/><path d='M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12'/><path d='m14 16-3 3 3 3'/><path d='M8.293 13.596 3.61 5.485A1.83 1.83 0 0 1 3.61 3.7 1.784 1.784 0 0 1 5.166 2.8h8.52a1.83 1.83 0 0 1 1.556.89l2.554 4.425'/><path d='m6 6 3-3-3-3'/><path d='m14.5 9 3 3-3 3'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0D1117" />
+    <title>Smart Recycle AI — Intelligent Waste &amp; Sustainability Platform</title>
+    <meta name="description" content="AI-Powered Waste Classification &amp; Live GPS Radar Finder. Identify recyclable materials in real time and discover nearby verified drop-off hubs using navigator.geolocation." />
+
+    <!-- Open Graph / Facebook Thumbnail Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://localhost:5173/" />
+    <meta property="og:title" content="Smart Recycle AI — AI Waste Sorting &amp; Live GPS Radar" />
+    <meta property="og:description" content="Instant waste stream identification, regional language guidance, and live GPS drop-off radar using browser navigator.geolocation." />
+    <meta property="og:image" content="/thumbnail.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Smart Recycle AI Dashboard &amp; Live GPS Radar Thumbnail" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Smart Recycle AI — AI Waste Sorting &amp; Live GPS Radar" />
+    <meta name="twitter:description" content="Instant waste stream identification, 10 regional languages, and live GPS drop-off radar." />
+    <meta name="twitter:image" content="/thumbnail.svg" />
+
+    <!-- PWA Manifest & Mobile Capability -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="SmartRecycle" />
+
+    <!-- Fonts & Leaflet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  </head>
+  <body class="bg-eco-bg text-slate-800 antialiased selection:bg-emerald/20 selection:text-forest-900 transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          /* DISABLED */ // navigator.serviceWorker.register('/sw.js', { scope: '/' })
+            .then((registration) => {
+              console.log('Smart Recycle AI Service Worker registered with scope:', registration.scope);
+            })
+            .catch((err) => {
+              console.warn('Service Worker registration skipped or failed:', err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
