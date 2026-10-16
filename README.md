@@ -39,7 +39,7 @@ python3 api.py
 ### 3. Frontend
 cd person3-frontend
 npm install
-echo "VITE_API_BASE_URL=http://localhost:8000" > .env
+echo "VITE_API_BASE_URL=http:http://127.0.0.1:8000/docs" > .env
 npm run dev
 
 ## 🧪 Testing
