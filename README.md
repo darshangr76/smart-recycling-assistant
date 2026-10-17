@@ -39,7 +39,7 @@ python3 api.py
 ### 3. Frontend
 cd person3-frontend
 npm install
-echo "VITE_API_BASE_URL=http:http://127.0.0.1:8000/docs" > .env
+echo "VITE_API_BASE_URL=http://127.0.0.1:8000" > .env
 npm run dev
 
 ## 🧪 Testing
@@ -53,7 +53,7 @@ python3 test_backend.py
 
 **Try it now:** [https://smart-recycling-assistant-76.netlify.app](https://smart-recycling-assistant-76.netlify.app)
 
-> **Note:** The Netlify deploy shows the full UI. For live AI classification, run the backend locally (see Quick Start) — the API runs on-device via Ollama.
+> **Live AI Backend:** https://contracting-eur-persons-newton.trycloudflare.com (Currently running live with the 11B Vision model)
 
 ---
 
@@ -69,10 +69,10 @@ Full walkthrough: React frontend → FastAPI backend → RAG-grounded tips → l
 
 ## 📸 Screenshots
 
-### 1. Person 3 Frontend — AI Waste Scanner
+### 1. Person 3 Frontend — React UI
 ![Frontend](docs/screenshots/03.jpeg)
 
-### 2. Person 2 Backend — Battery API Response
+### 2. Person 2 Backend — FastAPI 200 OK Terminal
 ![Battery API](docs/screenshots/02.jpeg)
 
 ### 3. Swagger UI — 18 Endpoints
