@@ -272,9 +272,16 @@ export const DEMO_PRESETS: DemoPresetItem[] = [
 
 export class AIService {
   private static getApiBaseUrl(): string {
+    // Priority 1: baked-in env URL (the tunnel URL — always wins)
+    const envUrl = import.meta.env.VITE_API_BASE_URL;
+    if (envUrl && envUrl.trim()) return envUrl.trim();
+
+    // Priority 2: user override from Settings UI
     const customUrl = localStorage.getItem('smart_recycle_custom_api');
     if (customUrl && customUrl.trim()) return customUrl.trim();
-    return import.meta.env.VITE_API_BASE_URL || '';
+
+    // Priority 3: no backend configured (demo mode)
+    return '';
   }
 
   /**
@@ -294,34 +301,27 @@ export class AIService {
     return { valid: true };
   }
 
-  /**
-   * Call external AI backend (POST /api/classify-waste)
-   * Falls back smoothly to demo simulation when no backend is running
-   */
   public static async classifyWaste(
     imageFile: File,
-    options?: { signal?: AbortSignal; forceDemo?: boolean }
+    options?: { signal?: AbortSignal }
   ): Promise<{ data: WasteClassification; isLive: boolean; errorNotice?: string }> {
-    const isDemoForced = false; // FORCED LIVE: always call backend
     const baseUrl = this.getApiBaseUrl();
-
-    // If explicit demo mode or no baseUrl configured, execute demo simulation with intelligent fallback
-    if (isDemoForced || !baseUrl) {
-      const simulatedResult = await this.simulateClassification(imageFile);
-      return {
-        data: simulatedResult,
-        isLive: false,
-        errorNotice: !baseUrl
-          ? 'No AI backend configured (VITE_API_BASE_URL). Showing high-fidelity demo classification.'
-          : undefined
-      };
+    if (!baseUrl) {
+      throw new Error('No AI backend configured. Set VITE_API_BASE_URL or localStorage.smart_recycle_custom_api.');
     }
 
-    const endpoint = `${baseUrl.replace(/\/+$/, '')}/api/classify-waste`;
-    const formData = new FormData();
-    formData.append('image', imageFile);
+    const image_b64 = await new Promise<string>((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const result = String(reader.result || '');
+        resolve(result.includes(',') ? result.split(',')[1] : result);
+      };
+      reader.onerror = () => reject(reader.error ?? new Error('FileReader failed'));
+      reader.readAsDataURL(imageFile);
+    });
 
-    // Timeout controller (default 12 seconds)
+    const endpoint = `${baseUrl.replace(/\/+$/, '')}/classify-image`;
+
     const timeout = 30000;
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), timeout);
@@ -329,14 +329,16 @@ export class AIService {
     try {
       const response = await fetch(endpoint, {
         method: 'POST',
-        body: formData,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ image_b64 }),
         signal: options?.signal || controller.signal,
       });
 
-      clearTimeout(timeoutId);
-
       if (!response.ok) {
-        throw new Error(`AI Server responded with HTTP ${response.status}: ${response.statusText}`);
+        const bodyText = await response.text().catch(() => '');
+        throw new Error(
+          `classify HTTP ${response.status} at ${response.url} — ${bodyText.slice(0, 200)}`
+        );
       }
 
       const json = await response.json();
@@ -347,24 +349,14 @@ export class AIService {
           ...validated,
           imageUrl: URL.createObjectURL(imageFile),
           timestamp: new Date().toISOString(),
-          isDemo: false
+          isDemo: false,
         },
-        isLive: true
+        isLive: true,
       };
-    } catch (err: any) {
+    } finally {
       clearTimeout(timeoutId);
-      console.warn('AI Endpoint error or offline. Falling back to demo response:', err.message);
-
-      // Gracefully fall back to demo simulation with clear notice
-      const fallbackResult = await this.simulateClassification(imageFile);
-      return {
-        data: fallbackResult,
-        isLive: false,
-        errorNotice: `AI Service unavailable (${err.name === 'AbortError' ? 'Timeout' : err.message || 'Offline'}). Switched to Demo Mode.`
-      };
     }
   }
-
   private static validateApiResponse(data: any): WasteClassification {
     const validCategories: WasteCategory[] = [
       'Plastic',
