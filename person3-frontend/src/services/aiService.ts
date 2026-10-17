@@ -311,13 +311,27 @@ export class AIService {
     }
 
     const image_b64 = await new Promise<string>((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const result = String(reader.result || '');
-        resolve(result.includes(',') ? result.split(',')[1] : result);
+      const img = new Image();
+      const objectUrl = URL.createObjectURL(imageFile);
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+          URL.revokeObjectURL(objectUrl);
+          return reject(new Error('Canvas not supported'));
+        }
+        ctx.drawImage(img, 0, 0);
+        const jpegDataUrl = canvas.toDataURL('image/jpeg', 0.9);
+        URL.revokeObjectURL(objectUrl);
+        resolve(jpegDataUrl.split(',')[1]);
       };
-      reader.onerror = () => reject(reader.error ?? new Error('FileReader failed'));
-      reader.readAsDataURL(imageFile);
+      img.onerror = () => {
+        URL.revokeObjectURL(objectUrl);
+        reject(new Error('Failed to load image for conversion'));
+      };
+      img.src = objectUrl;
     });
 
     const endpoint = `${baseUrl.replace(/\/+$/, '')}/classify-image`;
