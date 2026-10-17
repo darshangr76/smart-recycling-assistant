@@ -87,3 +87,9 @@ Full walkthrough: React frontend → FastAPI backend → RAG-grounded tips → l
 ## 📜 License
 
 MIT - see LICENSE.
+
+## 🔗 Live API Documentation
+
+**Swagger UI (18 Endpoints):** [https://contracting-eur-persons-newton.trycloudflare.com/docs](https://contracting-eur-persons-newton.trycloudflare.com/docs)
+
+*You can test all backend endpoints directly from this link while the backend is running.*
