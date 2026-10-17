@@ -26,7 +26,7 @@ export const SettingsPage: React.FC = () => {
   const { language, setLanguage, languages, t } = useLanguage();
   const { showToast } = useToast();
 
-  const [apiUrlInput, setApiUrlInput] = useState(settings.customApiUrl);
+  const [apiUrlInput, setApiUrlInput] = useState(settings.customApiUrl || 'https://contracting-eur-persons-newton.trycloudflare.com');
   const [isTestingApi, setIsTestingApi] = useState(false);
   const [isDetectingGps, setIsDetectingGps] = useState(false);
   const [testStatus, setTestStatus] = useState<{ success?: boolean; message?: string } | null>(null);
@@ -64,7 +64,7 @@ export const SettingsPage: React.FC = () => {
     setTestStatus(null);
 
     try {
-      const endpoint = `${apiUrlInput.replace(/\/+$/, '')}/api/classify-waste`;
+      const endpoint = `${apiUrlInput.replace(/\/+$/, '')}/classify-image`;
       const res = await fetch(endpoint, { method: 'OPTIONS' }).catch(() => null);
       if (res && res.status < 500) {
         setTestStatus({ success: true, message: `Connected! Backend returned status ${res.status}.` });
@@ -72,7 +72,7 @@ export const SettingsPage: React.FC = () => {
       } else {
         setTestStatus({
           success: false,
-          message: 'Could not connect to /api/classify-waste. Check CORS headers and ensure service is running.'
+          message: 'Could not connect to /classify-image. Check CORS headers and ensure service is running.'
         });
       }
     } catch (err: any) {
@@ -399,7 +399,7 @@ export const SettingsPage: React.FC = () => {
               <h3>Custom AI Vision Endpoint</h3>
             </div>
             <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
-              POST /api/classify-waste
+              POST /classify-image
             </span>
           </div>
 
