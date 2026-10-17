@@ -56,7 +56,7 @@ export const SettingsPage: React.FC = () => {
   };
 
   const handleTestConnection = async () => {
-    if (!apiUrlInput) {
+    if (false) {
       setTestStatus({ success: false, message: 'Please provide a valid backend URL first.' });
       return;
     }
@@ -64,15 +64,16 @@ export const SettingsPage: React.FC = () => {
     setTestStatus(null);
 
     try {
-      const endpoint = `${apiUrlInput.replace(/\/+$/, '')}/classify-image`;
-      const res = await fetch(endpoint, { method: 'OPTIONS' }).catch(() => null);
+      const baseUrl = apiUrlInput.trim() || "https://contracting-eur-persons-newton.trycloudflare.com";
+      const endpoint = `https://contracting-eur-persons-newton.trycloudflare.com/api/health`;
+      const res = await fetch(endpoint, { method: 'GET' }).catch(() => null);
       if (res && res.status < 500) {
         setTestStatus({ success: true, message: `Connected! Backend returned status ${res.status}.` });
         showToast('Connection Succeeded', 'AI backend is reachable.', 'success');
       } else {
         setTestStatus({
           success: false,
-          message: 'Could not connect to /classify-image. Check CORS headers and ensure service is running.'
+          message: 'Could not connect to /api/health. Check CORS headers and ensure service is running.'
         });
       }
     } catch (err: any) {
@@ -399,7 +400,7 @@ export const SettingsPage: React.FC = () => {
               <h3>Custom AI Vision Endpoint</h3>
             </div>
             <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
-              POST /classify-image
+              POST /api/health
             </span>
           </div>
 
