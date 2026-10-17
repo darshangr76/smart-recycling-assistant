@@ -72,16 +72,14 @@ Full walkthrough: React frontend → FastAPI backend → RAG-grounded tips → l
 ### 1. Person 3 Frontend — React UI
 ![Frontend](docs/screenshots/03.jpeg)
 
-### 2. Person 2 Backend — FastAPI 200 OK Terminal
-![Battery API](docs/screenshots/02.jpeg)
 
-### 3. Swagger UI — 18 Endpoints
-![Swagger UI](docs/screenshots/01.jpeg)
+### Swagger UI — 18 Endpoints
+![Swagger UI](Screenshot 2026-10-15 at 9.14.35 PM.jpeg)
 
-### 4. Person 1 Vision — Standalone Classifier
+### Person 1 Vision — Standalone Classifier
 ![Vision](docs/screenshots/05.jpeg)
 
-### 5. Live LAN Demo — Cross-Machine
+### Live LAN Demo — Cross-Machine
 ![LAN Demo](docs/screenshots/08.jpeg)
 
 ---
