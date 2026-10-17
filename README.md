@@ -69,12 +69,8 @@ Full walkthrough: React frontend → FastAPI backend → RAG-grounded tips → l
 
 ## 📸 Screenshots
 
-### 1. Person 3 Frontend — React UI
+###  Person 3 Frontend — React UI
 ![Frontend](docs/screenshots/03.jpeg)
-
-
-### Swagger UI — 18 Endpoints
-![Swagger UI](Screenshot 2026-10-15 at 9.14.35 PM.jpeg)
 
 ### Person 1 Vision — Standalone Classifier
 ![Vision](docs/screenshots/05.jpeg)
