@@ -2,7 +2,7 @@
 
 > AI that turns any waste item into accurate, RAG-grounded disposal guidance. 4,249 items, 105 recycling guidelines, live CO₂ impact. Runs on-device.
 
-## ��️ Architecture
+## Architecture
 
 Person 3 (React Frontend)  ->  Person 2 (FastAPI + AI Brain)  ->  Person 1 (Vision)
 
